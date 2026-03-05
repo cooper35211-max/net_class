@@ -1,29 +1,8 @@
-#1
-dss=" #hello Pyqt6,,"
-print("去除空格與特殊符號")
+name =input("請輸入你的名字:")
+dozens=int(input("請輸入幾打:"))
+people=int(input("將分送給多少人:"))
 
-#s1=dss.strip().rstrip(",")
-print("s1=",dss)
-s1=dss.strip().lstrip("#").rstrip(",")
-print("s1=",s1)
-
-#2
-print("\n#2字串連結")
-#s2="#".join(["a",".","c"]);print("s2",s2)#輸出 a#.#c
-s2=dss.join(["a",".","c"]);
-print("s2=",s2)#輸出 a #hello Pyqt6,, . #hello Pyqt6,, c
-s3="s3"
-s3+="xx"
-print("s3=",s3)
-
-#3
-print("\n#3 查找字元")
-css="abclc2c3"
-pi=css.find("c3")
-print("pi=",pi)#-1表示沒有找到
-
-#4
-print("\n#4 字串比較")
-print(s1>s2)
-print(s1==s2)
-print(s1<s2)
+all=dozens*12#總共有幾顆蛋
+average=all//people#平均每人分到多少顆
+remain=all%people#剩下多少顆
+print("{}同學，你總共有{}顆蛋，平均每人分到{}顆，剩下{}顆。".format(name,all,average,remain))
